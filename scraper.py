@@ -39,7 +39,7 @@ def parse_shifts(shift_elements, shifts):
     print(f"Processed {len(shift_elements)} shifts. Total shifts: {len(shifts)}")
 
 
-@flow(name="Coop Shift Scraper")
+@flow(name="Coop Shift Scraper", log_prints=True)
 def get_shifts():
     username_block = Secret.load("coop-username")
     password_block = Secret.load("coop-password")
