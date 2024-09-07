@@ -63,6 +63,7 @@ def connect_to_mongodb():
         sys.exit(1)
 
 
+@task(log_prints=True)
 def save_shifts(shifts, client):
     shift_collection = client["coop"]["shifts"]
 
